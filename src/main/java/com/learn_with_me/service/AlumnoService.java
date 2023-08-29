@@ -26,7 +26,29 @@ public class AlumnoService {
 		return this.alumnoRepository.findAll();
 	}
 	
+	public Alumno buscarPorId(int id){
+		Alumno alumno = alumnoRepository.findById(id).get();
+		return alumno;
+	}
 	
-	
+	public boolean eliminarPorId(int id){
+		if (alumnoRepository.existsById(id)) {
+			alumnoRepository.deleteById(id);
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
 
+	//para la validacion simple del registro
+
+	public Alumno buscarPorEmail(String email){
+		return alumnoRepository.findByMail(email);
+	}
+
+	// actualizar por id
+	public void actualizarAlumno(Alumno alum) {
+		alumnoRepository.save(alum);
+	}
 }

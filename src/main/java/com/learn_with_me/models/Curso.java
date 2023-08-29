@@ -25,13 +25,10 @@ public class Curso {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id_Curso;
     private String nombreCurso;
-    private String descripcion;
-    private int duracion;
-    private String dificultad;
-    private String modalidad;
+    private Integer cantidadVideos;
     
     @ManyToOne 
-    private Profesor profesor;
+    private Profesor profe;
     
 	@OneToMany (mappedBy = "cursos")
 	private List<Inscripcion> inscrip;	
@@ -40,7 +37,7 @@ public class Curso {
 		super();
 		this.id_Curso = id_Curso;
 		this.nombreCurso = nombreCurso;
-		
+		this.cantidadVideos = cantidadVideos;
 	}
     
 }
