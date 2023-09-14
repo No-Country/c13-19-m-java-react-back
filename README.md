@@ -45,6 +45,7 @@ ejemplo:
     "pais": "argentina"
 }
 
+
 **Endpoint: Login**
 
 Solicitud: Post
@@ -151,6 +152,7 @@ ejemplo:
 }
 
 
+
 **Endpoint: Eliminar por id**
 
 Descripción: Elimina un alumno con el id recibido por la path variable de la bd
@@ -164,13 +166,12 @@ ejemplo:
 Usuario eliminado con éxito
 
 
-**Endpoint: Actualizar los datos del alumno por id **
+**Endpoint: Actualizar los datos del alumno por id**
 
 Descripción: Se actualiza los datos del usuario por el id recibido en la path variable, más la posibilidad de cambiar la foto que se le asignó por defecto al registrarse, se debe enviar un multipart/form-data
 Solicitud: Put
 
 url:https://learn-with-me-production.up.railway.app/Api/v1/alumno/actualizarAlumnoPorID/1
-
 
 
 
