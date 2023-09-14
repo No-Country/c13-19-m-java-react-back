@@ -191,6 +191,8 @@ Jwt
 
 Hibernet
 
+Lombok
+
 Spring Tool Suit
 
 Visual Studio Code
