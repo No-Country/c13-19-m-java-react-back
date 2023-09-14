@@ -189,7 +189,7 @@ Spring Security
 
 Jwt
 
-Hibernet
+Hibernate
 
 Lombok
 
