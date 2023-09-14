@@ -15,41 +15,37 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "cursos")
 public class Curso {
-	
- 
-    
+
     @Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id_Curso;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id_Curso;
     private String nombreCurso;
     private LocalDate fecha_inicio;
     private LocalDate fecha_finalizacion;
     private Integer cantidadVideosVistos;
     private Integer cantidadVideosRestantes;
     private Integer cantidadVideosTotal;
+    private String tipoDeAprendizaje;
 
-    
     @ManyToOne
-    @JoinColumn(name="id_profesor")
+    @JoinColumn(name = "id_profesor")
     private Profesor profesor;
-    
-	@OneToMany (mappedBy = "curso")
-	private List<Inscripcion> inscrip;	
-	
-	@OneToMany (mappedBy = "curso")
-	private List<Imagen> imagenes;
-	
-	@OneToMany (mappedBy = "curso")
+
+    @OneToMany(mappedBy = "curso")
+    private List<Inscripcion> inscrip;
+
+    @OneToMany(mappedBy = "curso")
     private List<Tarea> tareas;
 
+   @ManyToOne 
+   @JoinColumn(name="Id_ruta")
+   private Ruta ruta;
 
-	
-    
+   
 }
