@@ -193,6 +193,8 @@ Hibernet
 
 Lombok
 
+Mysql
+
 Spring Tool Suit
 
 Visual Studio Code
